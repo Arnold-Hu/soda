@@ -34,7 +34,7 @@
     reader.readAsText(file);
     reader.onload = function(e){
       var points = JSON.parse(this.result);
-      heatmapOverlay = new BMapLib.HeatmapOverlay({"radius":20});
+      heatmapOverlay = new BMapLib.HeatmapOverlay({"radius":30});
       map.addOverlay(heatmapOverlay);
       heatmapOverlay.setDataSet({data:points,max:100});
     };
